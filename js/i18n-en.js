@@ -17,9 +17,9 @@ export default {
 
   /* ---------- Home ---------- */
   'meta.title': 'Andreu Sureda | Environment Artist · Technical Artist',
-  'meta.desc': "Portfolio of Andreu Sureda, Environment Artist and Technical Artist. Dark, atmospheric worlds in Unreal Engine 5: Demon's Bell, procedural materials, VFX and tools.",
+  'meta.desc': "Portfolio of Andreu Sureda, Environment Artist and Technical Artist. Atmospheric worlds in Unreal Engine 5: Demon's Bell, procedural materials, VFX and tools.",
 
-  'hero.lede': 'Building dark, stylized, atmospheric worlds in Unreal Engine 5. Specialized in medieval fantasy with an industrial edge.',
+  'hero.lede': 'Building stylized, atmospheric worlds in Unreal Engine 5.',
   'hero.cta1': "View Demon's Bell",
   'hero.cta2': 'Projects',
   'hero.cap': 'Belfry, the bell tower',
@@ -184,6 +184,7 @@ export default {
   'ct.copy': 'Copy',
   'ct.phone': 'Phone',
   'ct.cv': 'Download CV',
+  'ct.cvHref': 'CV/Andreu_Sureda_EN_CV.pdf',
 
   /* ---------- Paginas de proyecto (comun) ---------- */
   'p.back': 'Projects',
