@@ -1,119 +1,154 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-base="../">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VR Environments — Tururut | Andreu Sureda</title>
-<link rel="stylesheet" href="../css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="vr.meta.title">VR Environments | Andreu Sureda</title>
+  <meta name="description" content="Entornos VR en Tururut: Unreal Engine 5, Unity, Blender, Substance, VFX con Niagara y C#. Caso de estudio de Andreu Sureda." data-i18n-attr="content:vr.meta.desc">
+  <meta name="theme-color" content="#0d0b0a">
+  <link rel="canonical" href="https://andreusureda.com/projects/vr-tururut.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Andreu Sureda">
+  <meta property="og:title" content="VR Environments | Andreu Sureda">
+  <meta property="og:description" content="Entornos 3D para realidad virtual en UE5 y Blender, optimizados para la comodidad y el rendimiento.">
+  <meta property="og:url" content="https://andreusureda.com/projects/vr-tururut.html">
+  <meta property="og:image" content="https://andreusureda.com/media/web/personal-projects/vr-tururut/Olite_VR_01-1600.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (localStorage.getItem('portfolio_lang') === 'en') { document.documentElement.setAttribute('data-lang-pending', ''); setTimeout(function () { document.documentElement.removeAttribute('data-lang-pending'); }, 2000); } } catch (e) {}
+  </script>
+  <link rel="preload" href="../fonts/big-shoulders-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="module" src="../js/main.js"></script>
 </head>
 <body>
-<nav>
-  <a href="../index.html" class="nav-logo">A. Sureda</a>
-  <ul class="nav-links">
-    <li><a href="../index.html#about"><span data-es>Perfil</span><span data-en>About</span></a></li>
-    <li><a href="../index.html#demons-bell">Demon's Bell</a></li>
-    <li><a href="../index.html#projects"><span data-es>Proyectos</span><span data-en>Projects</span></a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-  </div>
-</nav>
-<header class="proj-hero">
-  <div class="proj-hero-bg" style="background-color:#0d0d10"></div>
-  <div class="proj-hero-overlay"></div>
-  <div class="proj-hero-content">
-    <a href="../index.html#projects" class="proj-back">← <span data-es>Volver a Proyectos</span><span data-en>Back to Projects</span></a>
-    <p class="project-tag">UE5 · Unity · Blender · Substance · C#</p>
-<h1 class="proj-title">VR Environments<br><span>Tururut</span></h1>
-<p class="proj-subtitle"><span data-es>Technical Artist y Developer: entornos 3D para realidad virtual, aplicaciones interactivas, VFX y desarrollo web.</span><span data-en>Technical Artist and Developer: 3D environments for virtual reality, interactive applications, VFX, and web development.</span></p>
-  </div>
-</header>
-<div class="section-divider-full"></div>
-<div class="proj-body">
-  <main class="proj-main">
-    <h3><span data-es>El trabajo en Tururut</span><span data-en>Work at Tururut</span></h3>
-    <p data-es>En Tururut trabajé en un rol multidisciplinar combinando entornos 3D para VR, aplicaciones interactivas en Unity, VFX con Niagara y desarrollo web. La variedad requirió adaptarse rápidamente a tecnologías y requisitos distintos en cada proyecto.</p>
-    <p data-en>At Tururut I worked in a multidisciplinary role combining 3D environments for VR, interactive Unity applications, Niagara VFX, and web development. The variety required adapting quickly to different technologies and requirements in each project.</p>
-    <h3><span data-es>Entornos VR</span><span data-en>VR Environments</span></h3>
-    <p data-es>Desarrollados en Unreal Engine 5 y Blender, con atención especial a la optimización: geometría limpia, draw calls controlados y sin efectos que puedan causar mareo.</p>
-    <p data-en>Developed in Unreal Engine 5 and Blender, with special focus on optimization: clean geometry, controlled draw calls, and no effects that may cause motion sickness.</p>
-    <ul>
-      <li><span data-es>Modelado y preparación de assets en Blender para UE5</span><span data-en>Asset modeling and prep in Blender for UE5</span></li>
-      <li><span data-es>Texturizado PBR con Substance Painter y materiales procedurales con Designer</span><span data-en>PBR texturing with Substance Painter and procedural materials with Designer</span></li>
-      <li><span data-es>Optimización de geometría y LODs para VR</span><span data-en>Geometry optimization and LODs for VR</span></li>
-      <li><span data-es>Iluminación y post-proceso en UE5</span><span data-en>Lighting and post-processing in UE5</span></li>
-    </ul>
-    <h3><span data-es>Aplicaciones y VFX</span><span data-en>Applications &amp; VFX</span></h3>
-    <div class="feature-grid">
-      <div class="feature-item"><h5>Unity / C#</h5><p data-es>Scripts de lógica, gestión de estados e interacciones.</p><p data-en>Logic scripts, state management, and interactions.</p></div>
-      <div class="feature-item"><h5>VFX — Niagara</h5><p data-es>Sistemas de partículas en UE5 para efectos en tiempo real.</p><p data-en>Particle systems in UE5 for real-time effects.</p></div>
-      <div class="feature-item"><h5><span data-es>Desarrollo Web</span><span data-en>Web Development</span></h5><p data-es>Front-end integrado en proyectos con HTML, CSS y JS.</p><p data-en>Front-end integrated in projects with HTML, CSS, and JS.</p></div>
-      <div class="feature-item"><h5>Substance</h5><p data-es>Materiales procedurales (Designer) y texturizado artístico (Painter).</p><p data-en>Procedural materials (Designer) and artistic texturing (Painter).</p></div>
-    </div>
-    <div class="callout"><p data-es>Un rol multidisciplinar que exigió adaptabilidad técnica constante — del sculpt de entornos VR a scripts de Unity, pasando por Niagara o páginas web.</p><p data-en>A multidisciplinary role requiring constant technical adaptability — from VR environment sculpting to Unity scripts, Niagara systems, and web pages.</p></div>
-    <h3><span data-es>Capturas</span><span data-en>Screenshots</span></h3>
+  <a class="skip-link" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
 
-    <div class="carousel-wrap">
-      <button class="carousel-btn carousel-btn-prev" aria-label="previous">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="carousel-track-outer">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/vr-tururut/Olite_VR_01.png" alt="Entorno VR — Vista general">
-            <div class="carousel-slide-caption">
-              <span data-es>Entorno VR — Vista general</span><span data-en>VR Environment — Overview</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/vr-tururut/Olite_VR_02.png" alt="Entorno VR — Detalle">
-            <div class="carousel-slide-caption">
-              <span data-es>Entorno VR — Detalle</span><span data-en>VR Environment — Detail</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/vr-tururut/Olite_VR_03.png" alt="Entorno VR — Interior">
-            <div class="carousel-slide-caption">
-              <span data-es>Entorno VR — Interior</span><span data-en>VR Environment — Interior</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/vr-tururut/Olite_VR_04.png" alt="Entorno VR — Materiales">
-            <div class="carousel-slide-caption">
-              <span data-es>Entorno VR — Materiales</span><span data-en>VR Environment — Materials</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/vr-tururut/Olite_VR_05.png" alt="Entorno VR — Iluminación">
-            <div class="carousel-slide-caption">
-              <span data-es>Entorno VR — Iluminación</span><span data-en>VR Environment — Lighting</span>
-            </div>
-          </div>
+  <header class="nav" data-nav>
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="../index.html">Andreu Sureda</a>
+      <nav class="nav__links" id="nav-links" aria-label="Principal" data-i18n-attr="aria-label:ui.navLabel">
+        <a href="../index.html#demons-bell">Demon's Bell</a>
+        <a href="../index.html#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__tools">
+        <a class="icon-link" href="https://www.artstation.com/og_isy" target="_blank" rel="noopener" aria-label="ArtStation"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-artstation"></use></svg></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/andreu-sureda-135765315/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-linkedin-logo"></use></svg></a>
+        <a class="icon-link icon-link--extra" href="https://www.instagram.com/ogisy3d/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg></a>
+        <a class="icon-link icon-link--extra" href="https://x.com/OG_ISY" target="_blank" rel="noopener" aria-label="X"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-x-logo"></use></svg></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
+          <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle data-i18n="ui.menu">Menú</button>
       </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="next">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-      <div class="carousel-dots"><button class="carousel-dot active" aria-label="slide 1"></button><button class="carousel-dot" aria-label="slide 2"></button><button class="carousel-dot" aria-label="slide 3"></button><button class="carousel-dot" aria-label="slide 4"></button><button class="carousel-dot" aria-label="slide 5"></button></div>
-      <div class="carousel-counter"></div>
     </div>
+  </header>
 
+  <main id="main">
+    <article>
+      <header class="p-hero wrap">
+        <a class="p-back text-link" href="../index.html#proyectos"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-right"></use></svg><span data-i18n="p.back">Proyectos</span></a>
+        <h1 class="p-title h-display">VR Environments</h1>
+        <p class="p-who" data-i18n="vr.who">Tururut · Technical Artist / Developer</p>
+        <ul class="tags"><li>UE5</li><li>Unity</li><li>Blender</li><li>Substance</li><li>C#</li><li>VR</li><li>VFX</li></ul>
+        <p class="lead" data-i18n="vr.lead">Rol multidisciplinar creando entornos 3D para realidad virtual en UE5 y Blender, optimizados para la comodidad y el rendimiento en visores.</p>
+        <div class="p-links">
+          <a class="btn btn--ghost" href="https://www.instagram.com/p/DUY_R3mguXQ/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg>
+            <span data-i18n="vr.ig">Ver en Instagram</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <figure class="p-cover g-fig">
+          <a class="g-item" href="../media/personal-projects/vr-tururut/Olite_VR_01.png" data-lb="gallery" data-md="../media/web/personal-projects/vr-tururut/Olite_VR_01-1600.jpg">
+            <img src="../media/web/personal-projects/vr-tururut/Olite_VR_01-1600.jpg" srcset="../media/web/personal-projects/vr-tururut/Olite_VR_01-800.jpg 800w, ../media/web/personal-projects/vr-tururut/Olite_VR_01-1600.jpg 1600w" sizes="(max-width: 1440px) 92vw, 1328px" width="1600" height="900" fetchpriority="high" decoding="async"
+                 alt="Patio medieval en VR: dos luchadores en duelo sobre un escenario rodeado de público y estandartes" data-i18n-attr="alt:vr.g1.alt">
+          </a>
+          <figcaption data-i18n="vr.g1.cap">Vista general</figcaption>
+        </figure>
+
+        <div class="p-body">
+          <div class="p-body__main">
+            <p class="reveal" data-i18n="vr.p1">En VR cada fotograma cuenta y cualquier error visual puede marear. El trabajo consistía en equilibrar un espacio medieval creíble con un framerate estable.</p>
+            <h2 class="reveal" data-i18n="p.what">Qué hice</h2>
+            <ul class="p-list reveal">
+              <li data-i18n="vr.l1"><b>Entornos:</b> geometría limpia, draw calls controlados y LODs, sin efectos que puedan causar mareo.</li>
+              <li data-i18n="vr.l2"><b>Texturizado:</b> PBR con Substance Painter y materiales procedurales con Substance Designer.</li>
+              <li data-i18n="vr.l3"><b>Iluminación:</b> iluminación y post-proceso en UE5.</li>
+              <li data-i18n="vr.l4"><b>Código:</b> scripts de lógica e interacción en Unity / C#.</li>
+              <li data-i18n="vr.l5"><b>VFX:</b> sistemas de partículas con Niagara.</li>
+              <li data-i18n="vr.l6"><b>Web:</b> front-end integrado en proyectos interactivos.</li>
+            </ul>
+          </div>
+          <aside class="p-body__side reveal">
+            <dl class="p-facts">
+              <div><dt data-i18n="p.role">Rol</dt><dd data-i18n="vr.roleV">Technical Artist / Developer</dd></div>
+              <div><dt data-i18n="p.context">Contexto</dt><dd data-i18n="vr.ctxV">Trabajo en estudio, jul 2025 - may 2026</dd></div>
+              <div><dt data-i18n="p.tools">Herramientas</dt><dd>Unreal Engine 5, Unity, Blender, Substance Painter, Substance Designer, Niagara</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <section class="p-section" aria-labelledby="gal-t">
+          <h2 class="reveal" id="gal-t" data-i18n="p.gallery">Galería</h2>
+          <div class="gallery gallery--grid" style="margin-top:1.5rem">
+            <figure class="g-fig reveal">
+              <a class="g-item" href="../media/personal-projects/vr-tururut/Olite_VR_02.png" data-lb="gallery" data-md="../media/web/personal-projects/vr-tururut/Olite_VR_02-1600.jpg">
+                <img src="../media/web/personal-projects/vr-tururut/Olite_VR_02-800.jpg" srcset="../media/web/personal-projects/vr-tururut/Olite_VR_02-800.jpg 800w, ../media/web/personal-projects/vr-tururut/Olite_VR_02-1600.jpg 1559w" sizes="(max-width: 599px) 100vw, 46vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="Mercado medieval al atardecer: puestos con toldos de rayas, vides y torres cónicas" data-i18n-attr="alt:vr.g2.alt">
+              </a>
+              <figcaption data-i18n="vr.g2.cap">Detalle</figcaption>
+            </figure>
+            <figure class="g-fig reveal" style="--i:1">
+              <a class="g-item" href="../media/personal-projects/vr-tururut/Olite_VR_03.png" data-lb="gallery" data-md="../media/web/personal-projects/vr-tururut/Olite_VR_03-1600.jpg">
+                <img src="../media/web/personal-projects/vr-tururut/Olite_VR_03-800.jpg" srcset="../media/web/personal-projects/vr-tururut/Olite_VR_03-800.jpg 800w, ../media/web/personal-projects/vr-tururut/Olite_VR_03-1600.jpg 1600w" sizes="(max-width: 599px) 100vw, 46vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="Jardín amurallado con un arco de enredadera, naranjos y un camino de tierra" data-i18n-attr="alt:vr.g3.alt">
+              </a>
+              <figcaption data-i18n="vr.g3.cap">Interior</figcaption>
+            </figure>
+            <figure class="g-fig reveal">
+              <a class="g-item" href="../media/personal-projects/vr-tururut/Olite_VR_04.png" data-lb="gallery" data-md="../media/web/personal-projects/vr-tururut/Olite_VR_04-1600.jpg">
+                <img src="../media/web/personal-projects/vr-tururut/Olite_VR_04-800.jpg" srcset="../media/web/personal-projects/vr-tururut/Olite_VR_04-800.jpg 800w, ../media/web/personal-projects/vr-tururut/Olite_VR_04-1600.jpg 1600w" sizes="(max-width: 599px) 100vw, 46vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="Patio con naranjos, hortensias y un estandarte bajo arcos de piedra" data-i18n-attr="alt:vr.g4.alt">
+              </a>
+              <figcaption data-i18n="vr.g4.cap">Materiales</figcaption>
+            </figure>
+            <figure class="g-fig reveal" style="--i:1">
+              <a class="g-item" href="../media/personal-projects/vr-tururut/Olite_VR_05.png" data-lb="gallery" data-md="../media/web/personal-projects/vr-tururut/Olite_VR_05-1600.jpg">
+                <img src="../media/web/personal-projects/vr-tururut/Olite_VR_05-800.jpg" srcset="../media/web/personal-projects/vr-tururut/Olite_VR_05-800.jpg 800w, ../media/web/personal-projects/vr-tururut/Olite_VR_05-1600.jpg 1600w" sizes="(max-width: 599px) 100vw, 46vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="Estancia de castillo con tapices, vidrieras y apliques de luz cálida" data-i18n-attr="alt:vr.g5.alt">
+              </a>
+              <figcaption data-i18n="vr.g5.cap">Iluminación</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <a class="p-next" href="blender-addon.html">
+          <span data-i18n="p.next">Siguiente proyecto</span>
+          <strong>Simple Exporter <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-right"></use></svg></strong>
+        </a>
+      </div>
+    </article>
   </main>
-  <aside class="proj-sidebar">
-    <div class="proj-meta-card"><h4><span data-es>Info del Proyecto</span><span data-en>Project Info</span></h4><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Empresa</span><span data-en>Company</span></span><span class="proj-meta-value">Tururut</span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Rol</span><span data-en>Role</span></span><span class="proj-meta-value">Tech Art / Developer</span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Período</span><span data-en>Period</span></span><span class="proj-meta-value"><span data-es>Jul 2025 — Actualidad</span><span data-en>Jul 2025 — Present</span></span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Estado</span><span data-en>Status</span></span><span class="proj-meta-value active"><span data-es>Activo</span><span data-en>Active</span></span></div><div class="tag-list"><span class="tag">UE5</span><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">Substance</span><span class="tag">C#</span><span class="tag">VR</span><span class="tag">VFX</span></div></div>
-    <a href="https://www.instagram.com/p/DUY_R3mguXQ/" target="_blank" rel="noopener" class="proj-link-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><span data-es>Ver en Instagram</span><span data-en>View on Instagram</span></a>
-    <a href="../index.html#projects" class="proj-link-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg><span data-es>Volver a Proyectos</span><span data-en>Back to Projects</span></a>
-  </aside>
-</div>
-<footer>
-  <div><div class="footer-logo">Andreu Sureda</div><div class="footer-role">Environment Artist · Technical Artist</div></div>
-  <div class="footer-contact">
-    <a href="mailto:andreusuredaluis@gmail.com">andreusuredaluis@gmail.com</a>
-    <a href="tel:+34638274997">+34 638 27 49 97</a>
-    <div class="footer-copy">© 2026 Andreu Sureda</div>
-  </div>
-</footer>
-<script src="../js/main.js"></script>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Andreu Sureda</p>
+      <ul class="footer__social" aria-label="Redes sociales" data-i18n-attr="aria-label:ui.social">
+        <li><a class="icon-link" href="https://www.artstation.com/og_isy" target="_blank" rel="noopener" aria-label="ArtStation"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-artstation"></use></svg></a></li>
+        <li><a class="icon-link" href="https://www.linkedin.com/in/andreu-sureda-135765315/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-linkedin-logo"></use></svg></a></li>
+        <li><a class="icon-link" href="https://www.instagram.com/ogisy3d/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg></a></li>
+        <li><a class="icon-link" href="https://x.com/OG_ISY" target="_blank" rel="noopener" aria-label="X"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-x-logo"></use></svg></a></li>
+      </ul>
+      <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+    </div>
+  </footer>
 </body>
 </html>

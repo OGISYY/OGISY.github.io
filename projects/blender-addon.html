@@ -1,82 +1,159 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-base="../">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blender Addon — Simple Exporter | Andreu Sureda</title>
-<link rel="stylesheet" href="../css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="ad.meta.title">Simple Exporter, addon de Blender | Andreu Sureda</title>
+  <meta name="description" content="Simple Exporter: addon de Blender open source en Python que exporta objetos o colecciones con un clic desde el N-Panel. Herramienta de pipeline de Andreu Sureda." data-i18n-attr="content:ad.meta.desc">
+  <meta name="theme-color" content="#0d0b0a">
+  <link rel="canonical" href="https://andreusureda.com/projects/blender-addon.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Andreu Sureda">
+  <meta property="og:title" content="Simple Exporter, addon de Blender | Andreu Sureda">
+  <meta property="og:description" content="Exporta objetos o colecciones con un clic desde el N-Panel. De 5-7 pasos manuales a uno.">
+  <meta property="og:url" content="https://andreusureda.com/projects/blender-addon.html">
+  <meta property="og:image" content="https://andreusureda.com/media/web/demons-bell/blocking/Belfry/Belfry_01-1600.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (localStorage.getItem('portfolio_lang') === 'en') { document.documentElement.setAttribute('data-lang-pending', ''); setTimeout(function () { document.documentElement.removeAttribute('data-lang-pending'); }, 2000); } } catch (e) {}
+  </script>
+  <link rel="preload" href="../fonts/big-shoulders-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="module" src="../js/main.js"></script>
 </head>
 <body>
-<nav>
-  <a href="../index.html" class="nav-logo">A. Sureda</a>
-  <ul class="nav-links">
-    <li><a href="../index.html#about"><span data-es>Perfil</span><span data-en>About</span></a></li>
-    <li><a href="../index.html#demons-bell">Demon's Bell</a></li>
-    <li><a href="../index.html#projects"><span data-es>Proyectos</span><span data-en>Projects</span></a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-  </div>
-</nav>
-<header class="proj-hero">
-  <div class="proj-hero-bg" style="background-color:#0f0f12"></div>
-  <div class="proj-hero-overlay"></div>
-  <div class="proj-hero-content">
-    <a href="../index.html#projects" class="proj-back">← <span data-es>Volver a Proyectos</span><span data-en>Back to Projects</span></a>
-    <p class="project-tag">Python · Blender API</p>
-<h1 class="proj-title">Blender Addon<br><span>Simple Exporter</span></h1>
-<p class="proj-subtitle"><span data-es>Herramienta de pipeline para exportar assets desde Blender directamente a una carpeta destino, con control de prefijos, sufijos y estructura de objetos.</span><span data-en>Pipeline tool to export assets from Blender directly to a destination folder, with control over prefixes, suffixes, and object structure.</span></p>
-  </div>
-</header>
-<div class="section-divider-full"></div>
-<div class="proj-body">
-  <main class="proj-main">
-    <h3><span data-es>¿Qué es?</span><span data-en>What is it?</span></h3>
-    <p data-es>Simple Exporter es un addon de Blender desarrollado en Python que automatiza la exportación de assets 3D. El addon añade un panel en el viewport desde donde puedes exportar objetos individuales o colecciones enteras con un solo clic, sin navegar los menús de exportación manualmente.</p>
-    <p data-en>Simple Exporter is a Blender addon developed in Python that automates 3D asset export. The addon adds a panel in the viewport from which you can export individual objects or entire collections with a single click, without manually navigating export menus.</p>
-    <h3><span data-es>Funcionalidades</span><span data-en>Features</span></h3>
-    <div class="feature-grid">
-      <div class="feature-item"><h5><span data-es>Exportación Directa</span><span data-en>Direct Export</span></h5><p data-es>Exporta desde el viewport sin diálogos extra. Carpeta destino configurada una sola vez.</p><p data-en>Export from the viewport without extra dialogs. Destination folder set once.</p></div>
-      <div class="feature-item"><h5><span data-es>Prefijos y Sufijos</span><span data-en>Prefixes &amp; Suffixes</span></h5><p data-es>Añade prefijos/sufijos automáticamente para mantener convenciones de nomenclatura.</p><p data-en>Automatically adds prefixes/suffixes to maintain naming conventions.</p></div>
-      <div class="feature-item"><h5><span data-es>Objetos Sueltos</span><span data-en>Individual Objects</span></h5><p data-es>Exporta el objeto seleccionado como archivo independiente.</p><p data-en>Export the selected object as a standalone file.</p></div>
-      <div class="feature-item"><h5><span data-es>Colecciones Enteras</span><span data-en>Entire Collections</span></h5><p data-es>Exporta todos los objetos de una colección en un solo paso.</p><p data-en>Export all objects in a collection in one step.</p></div>
+  <a class="skip-link" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="../index.html">Andreu Sureda</a>
+      <nav class="nav__links" id="nav-links" aria-label="Principal" data-i18n-attr="aria-label:ui.navLabel">
+        <a href="../index.html#demons-bell">Demon's Bell</a>
+        <a href="../index.html#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__tools">
+        <a class="icon-link" href="https://www.artstation.com/og_isy" target="_blank" rel="noopener" aria-label="ArtStation"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-artstation"></use></svg></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/andreu-sureda-135765315/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-linkedin-logo"></use></svg></a>
+        <a class="icon-link icon-link--extra" href="https://www.instagram.com/ogisy3d/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg></a>
+        <a class="icon-link icon-link--extra" href="https://x.com/OG_ISY" target="_blank" rel="noopener" aria-label="X"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-x-logo"></use></svg></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
+          <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle data-i18n="ui.menu">Menú</button>
+      </div>
     </div>
-    <h3><span data-es>Implementación técnica</span><span data-en>Technical implementation</span></h3>
-    <p data-es>Construido sobre la Blender Python API (bpy). Registra operadores y paneles en el N-Panel del viewport 3D. Usa bpy.ops.export_scene.fbx() con los parámetros configurados por el usuario.</p>
-    <p data-en>Built on the Blender Python API (bpy). Registers operators and panels in the 3D viewport N-Panel. Uses bpy.ops.export_scene.fbx() with user-configured parameters.</p>
-    <div class="code-block"><span class="kw">import</span> bpy
-<span class="cm"># Panel in the N-Panel</span>
-<span class="kw">class</span> SIEMPLE_PT_ExportPanel(bpy.types.Panel):
-    bl_label       = <span class="st">"Simple Exporter"</span>
-    bl_space_type  = <span class="st">'VIEW_3D'</span>
-    bl_region_type = <span class="st">'UI'</span>
-    bl_category    = <span class="st">'Exporter'</span>
+  </header>
 
-    <span class="kw">def</span> draw(self, context):
-        layout = self.layout
-        layout.prop(context.scene, <span class="st">"export_path"</span>)
-        layout.prop(context.scene, <span class="st">"export_prefix"</span>)
-        layout.prop(context.scene, <span class="st">"export_suffix"</span>)
-        layout.operator(<span class="st">"siemple.export_selected"</span>)
-        layout.operator(<span class="st">"siemple.export_collection"</span>)</div>
-    <div class="callout"><p data-es>Desarrollado para resolver un problema real en mi flujo de trabajo — la exportación repetitiva de assets de Blender a Unreal Engine. De 5–7 pasos manuales a seleccionar y pulsar un botón.</p><p data-en>Developed to solve a real problem in my workflow — repetitive asset export from Blender to Unreal Engine. From 5–7 manual steps to select and press a button.</p></div>
+  <main id="main">
+    <article>
+      <header class="p-hero wrap">
+        <a class="p-back text-link" href="../index.html#proyectos"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-right"></use></svg><span data-i18n="p.back">Proyectos</span></a>
+        <h1 class="p-title h-display">Simple Exporter</h1>
+        <p class="p-who" data-i18n="ad.who">Addon de Blender · Herramienta de pipeline · Open Source</p>
+        <ul class="tags"><li>Python</li><li>Blender API</li><li>bpy</li><li>Open Source</li></ul>
+        <p class="lead" data-i18n="ad.lead">Addon de Blender que automatiza la exportación de assets 3D desde un panel en el viewport (N-Panel): objetos sueltos o colecciones enteras con un clic.</p>
+        <div class="p-links">
+          <a class="btn btn--primary" href="https://github.com/OGISYY/Siemple_Export-Blender-Addon-" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-github-logo"></use></svg>
+            <span data-i18n="ad.gh">Ver en GitHub</span>
+          </a>
+        </div>
+      </header>
 
+      <div class="wrap">
+          <div class="p-cover">
+            <pre class="code" aria-label="Código Python del addon Simple Exporter" data-i18n-attr="aria-label:ad.codeLabel"><code><span class="code__file">operators.py</span><span class="tok-k">def</span> <span class="tok-f">export_selection</span>(self, itemname, context, base_dir):
+    props = context.scene.props
+
+    prefix = props.prefix
+    suffix = props.suffix
+    name = prefix + bpy.path.clean_name(itemname) + suffix
+    fp = os.path.join(base_dir, name)
+
+    <span class="tok-k">if</span> props.file_format == <span class="tok-s">"OBJ"</span>:
+        options = self.load_operator_preset(
+            <span class="tok-s">'wm.obj_export'</span>, props.obj_preset)
+        options[<span class="tok-s">"filepath"</span>] = fp + <span class="tok-s">".obj"</span>
+        options[<span class="tok-s">"export_selected_objects"</span>] = <span class="tok-n">True</span>
+        options[<span class="tok-s">"apply_modifiers"</span>] = props.apply_modifiers
+        bpy.ops.wm.<span class="tok-f">obj_export</span>(**options)
+        self.file_count += <span class="tok-n">1</span>
+
+    <span class="tok-k">elif</span> props.file_format == <span class="tok-s">"FBX"</span>:
+        options = self.load_operator_preset(
+            <span class="tok-s">'export_scene.fbx'</span>, props.fbx_preset)
+        options[<span class="tok-s">"filepath"</span>] = fp + <span class="tok-s">".fbx"</span>
+        options[<span class="tok-s">"use_selection"</span>] = <span class="tok-n">True</span>
+        options[<span class="tok-s">"use_mesh_modifiers"</span>] = props.apply_modifiers
+        bpy.ops.export_scene.<span class="tok-f">fbx</span>(**options)
+        self.file_count += <span class="tok-n">1</span></code></pre>
+          </div>
+        <div class="p-body">
+          <div class="p-body__main">
+            <h2 class="reveal" data-i18n="ad.why">Por qué existe</h2>
+            <p class="reveal" data-i18n="ad.p1">Nació de un problema real en mi flujo de Blender a Unreal. Cada exportación obligaba a repetir los mismos pasos manuales, y los errores de nomenclatura acababan como assets rotos en el motor.</p>
+            <div class="compare reveal" style="margin-top:1.75rem">
+              <div>
+                <h3 data-i18n="ad.before">Antes</h3>
+                <ol>
+                  <li data-i18n="ad.b1">Seleccionar el objeto</li>
+                  <li data-i18n="ad.b2">Archivo, Exportar, FBX</li>
+                  <li data-i18n="ad.b3">Buscar la carpeta destino</li>
+                  <li data-i18n="ad.b4">Escribir el nombre con su prefijo</li>
+                  <li data-i18n="ad.b5">Ajustar las opciones</li>
+                  <li data-i18n="ad.b6">Repetir con cada asset</li>
+                </ol>
+              </div>
+              <div class="is-after">
+                <h3 data-i18n="ad.after">Con el addon</h3>
+                <ol>
+                  <li data-i18n="ad.a1">Seleccionar</li>
+                  <li data-i18n="ad.a2">Pulsar Export</li>
+                </ol>
+              </div>
+            </div>
+            <h2 class="reveal" data-i18n="p.what">Qué hice</h2>
+            <ul class="p-list reveal">
+              <li data-i18n="ad.l1"><b>Un clic:</b> exporta objetos sueltos o colecciones enteras.</li>
+              <li data-i18n="ad.l2"><b>Destino configurado una vez:</b> la carpeta se guarda con la escena.</li>
+              <li data-i18n="ad.l3"><b>Nomenclatura automática:</b> prefijos y sufijos para mantener la convención de nombres.</li>
+              <li data-i18n="ad.l4"><b>Por dentro:</b> bpy y bpy.ops.export_scene.fbx(), con soporte de presets del operador.</li>
+              <li data-i18n="ad.l5"><b>Compatibilidad:</b> Blender 3.x / 4.x.</li>
+            </ul>
+          </div>
+          <aside class="p-body__side reveal">
+            <dl class="p-facts">
+              <div><dt data-i18n="p.role">Rol</dt><dd data-i18n="ad.roleV">Diseño y desarrollo</dd></div>
+              <div><dt data-i18n="p.context">Contexto</dt><dd data-i18n="ad.ctxV">Herramienta personal, Blender 3.x / 4.x</dd></div>
+              <div><dt data-i18n="p.tools">Herramientas</dt><dd>Python, Blender API (bpy)</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <a class="p-next" href="variedad.html">
+          <span data-i18n="p.next">Siguiente proyecto</span>
+          <strong><span data-i18n="pr.var.title">Variedad de proyectos</span> <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-right"></use></svg></strong>
+        </a>
+      </div>
+    </article>
   </main>
-  <aside class="proj-sidebar">
-    <div class="proj-meta-card"><h4><span data-es>Info del Proyecto</span><span data-en>Project Info</span></h4><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Tipo</span><span data-en>Type</span></span><span class="proj-meta-value"><span data-es>Herramienta</span><span data-en>Tool</span></span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Lenguaje</span><span data-en>Language</span></span><span class="proj-meta-value">Python</span></div><div class="proj-meta-row"><span class="proj-meta-key">Platform</span><span class="proj-meta-value">Blender 3.x / 4.x</span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Estado</span><span data-en>Status</span></span><span class="proj-meta-value active">Open Source</span></div><div class="tag-list"><span class="tag">Python</span><span class="tag">Blender API</span><span class="tag">Pipeline</span><span class="tag">Open Source</span></div></div>
-    <a href="https://github.com/OGISYY/Siemple_Export-Blender-Addon-" target="_blank" rel="noopener" class="proj-link-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span data-es>Ver en GitHub</span><span data-en>View on GitHub</span></a>
-    <a href="../index.html#projects" class="proj-link-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg><span data-es>Volver a Proyectos</span><span data-en>Back to Projects</span></a>
-  </aside>
-</div>
-<footer>
-  <div><div class="footer-logo">Andreu Sureda</div><div class="footer-role">Environment Artist · Technical Artist</div></div>
-  <div class="footer-contact">
-    <a href="mailto:andreusuredaluis@gmail.com">andreusuredaluis@gmail.com</a>
-    <a href="tel:+34638274997">+34 638 27 49 97</a>
-    <div class="footer-copy">© 2026 Andreu Sureda</div>
-  </div>
-</footer>
-<script src="../js/main.js"></script>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Andreu Sureda</p>
+      <ul class="footer__social" aria-label="Redes sociales" data-i18n-attr="aria-label:ui.social">
+        <li><a class="icon-link" href="https://www.artstation.com/og_isy" target="_blank" rel="noopener" aria-label="ArtStation"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-artstation"></use></svg></a></li>
+        <li><a class="icon-link" href="https://www.linkedin.com/in/andreu-sureda-135765315/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-linkedin-logo"></use></svg></a></li>
+        <li><a class="icon-link" href="https://www.instagram.com/ogisy3d/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg></a></li>
+        <li><a class="icon-link" href="https://x.com/OG_ISY" target="_blank" rel="noopener" aria-label="X"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-x-logo"></use></svg></a></li>
+      </ul>
+      <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+    </div>
+  </footer>
 </body>
 </html>

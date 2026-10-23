@@ -1,123 +1,159 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-base="../">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Player To Player — FreeXPace | Andreu Sureda</title>
-<link rel="stylesheet" href="../css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="pp.meta.title">Player To Player, FreeXPace | Andreu Sureda</title>
+  <meta name="description" content="FreeXPace: juego móvil para Android publicado en Google Play. Programación de gameplay y arte técnico en Unity / C# de Andreu Sureda." data-i18n-attr="content:pp.meta.desc">
+  <meta name="theme-color" content="#0d0b0a">
+  <link rel="canonical" href="https://andreusureda.com/projects/player-to-player.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Andreu Sureda">
+  <meta property="og:title" content="Player To Player, FreeXPace | Andreu Sureda">
+  <meta property="og:description" content="Juego móvil publicado en Google Play. Catorce meses de gameplay, UI y optimización para Android.">
+  <meta property="og:url" content="https://andreusureda.com/projects/player-to-player.html">
+  <meta property="og:image" content="https://andreusureda.com/media/web/personal-projects/player-to-player/FreeXPace_01-1600.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (localStorage.getItem('portfolio_lang') === 'en') { document.documentElement.setAttribute('data-lang-pending', ''); setTimeout(function () { document.documentElement.removeAttribute('data-lang-pending'); }, 2000); } } catch (e) {}
+  </script>
+  <link rel="preload" href="../fonts/big-shoulders-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="module" src="../js/main.js"></script>
 </head>
 <body>
-<nav>
-  <a href="../index.html" class="nav-logo">A. Sureda</a>
-  <ul class="nav-links">
-    <li><a href="../index.html#about"><span data-es>Perfil</span><span data-en>About</span></a></li>
-    <li><a href="../index.html#demons-bell">Demon's Bell</a></li>
-    <li><a href="../index.html#projects"><span data-es>Proyectos</span><span data-en>Projects</span></a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
-    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-  </div>
-</nav>
-<header class="proj-hero">
-  <div class="proj-hero-bg" style="background-color:#0c0c10"></div>
-  <div class="proj-hero-overlay"></div>
-  <div class="proj-hero-content">
-    <a href="../index.html#projects" class="proj-back">← <span data-es>Volver a Proyectos</span><span data-en>Back to Projects</span></a>
-    <p class="project-tag">Unity · C# · Agile · Jira</p>
-<h1 class="proj-title">Player To Player<br><span>FreeXPace</span></h1>
-<p class="proj-subtitle"><span data-es>Gameplay Programmer y Technical Artist en un juego móvil para Android publicado en Google Play.</span><span data-en>Gameplay Programmer and Technical Artist on an Android mobile game published on Google Play.</span></p>
-  </div>
-</header>
-<div class="section-divider-full"></div>
-<div class="proj-body">
-  <main class="proj-main">
-    <h3><span data-es>El proyecto</span><span data-en>The project</span></h3>
-    <p data-es>FreeXPace es un juego móvil para Android. Trabajé como Gameplay Programmer y Technical Artist durante catorce meses, en un equipo con metodología Agile, sprints de dos semanas y Jira. Mi primera experiencia en un entorno de desarrollo profesional con procesos estructurados.</p>
-    <p data-en>FreeXPace is an Android mobile game. I worked as Gameplay Programmer and Technical Artist for fourteen months, in a team using Agile methodology, two-week sprints, and Jira. My first experience in a professional development environment with structured processes.</p>
-    <h3><span data-es>Responsabilidades</span><span data-en>Responsibilities</span></h3>
-    <div class="feature-grid">
-      <div class="feature-item"><h5>Gameplay — Unity / C#</h5><p data-es>Programación de mecánicas, sistemas de interacción y lógica de gameplay.</p><p data-en>Programming mechanics, interaction systems, and gameplay logic.</p></div>
-      <div class="feature-item"><h5><span data-es>Animaciones de UI</span><span data-en>UI Animations</span></h5><p data-es>Implementación de animaciones y transiciones de interfaz.</p><p data-en>UI animation and transition implementation.</p></div>
-      <div class="feature-item"><h5><span data-es>Assets 2D / 3D</span><span data-en>2D / 3D Assets</span></h5><p data-es>Integración de sprites, modelos y atlas de texturas en Unity.</p><p data-en>Integration of sprites, models, and texture atlases in Unity.</p></div>
-      <div class="feature-item"><h5><span data-es>Rendimiento Móvil</span><span data-en>Mobile Performance</span></h5><p data-es>Optimización de assets y scripts para Android.</p><p data-en>Asset and script optimization for Android.</p></div>
-    </div>
-    <h3>Workflow — Agile &amp; GitHub</h3>
-    <p data-es>Agile con sprints de dos semanas, Jira para gestión de tareas y GitHub para control de versiones con branches y pull requests. Donde aprendí a trabajar en un flujo de trabajo colaborativo real y estructurado.</p>
-    <p data-en>Agile with two-week sprints, Jira for task management, and GitHub for version control with branches and pull requests. Where I learned to work in a real, structured collaborative workflow.</p>
-    <ul>
-      <li><span data-es>Sprints de dos semanas con planning, daily y retrospectiva</span><span data-en>Two-week sprints with planning, dailies, and retrospectives</span></li>
-      <li><span data-es>Gestión de tareas en Jira</span><span data-en>Task management in Jira</span></li>
-      <li><span data-es>Git y GitHub — branches, pull requests, code reviews</span><span data-en>Git and GitHub — branches, pull requests, code reviews</span></li>
-    </ul>
-    <div class="callout"><p data-es>Primera experiencia en un equipo profesional con procesos reales — Agile, sprints, Jira y GitHub como herramientas de trabajo diario, no solo conceptos teóricos.</p><p data-en>First experience in a professional team with real processes — Agile, sprints, Jira, and GitHub as daily work tools, not just theoretical concepts.</p></div>
+  <a class="skip-link" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
 
-    <h3><span data-es>Capturas</span><span data-en>Screenshots</span></h3>
-
-    <div class="carousel-wrap carousel-contain">
-      <button class="carousel-btn carousel-btn-prev" aria-label="previous">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="carousel-track-outer">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/player-to-player/FreeXPace_01.png" alt="Pantalla principal del juego">
-            <div class="carousel-slide-caption">
-              <span data-es>Pantalla principal del juego</span><span data-en>Game main screen</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/player-to-player/FreeXPace_02.png" alt="UI — Menú de navegación">
-            <div class="carousel-slide-caption">
-              <span data-es>UI — Menú de navegación</span><span data-en>UI — Navigation menu</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/player-to-player/FreeXPace_03.png" alt="Gameplay — Mecánica principal">
-            <div class="carousel-slide-caption">
-              <span data-es>Gameplay — Mecánica principal</span><span data-en>Gameplay — Main mechanic</span>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="../media/personal-projects/player-to-player/FreeXPace_04.png" alt="Vista en Google Play">
-            <div class="carousel-slide-caption">
-              <span data-es>Vista en Google Play</span><span data-en>Google Play store view</span>
-            </div>
-          </div>
+  <header class="nav" data-nav>
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="../index.html">Andreu Sureda</a>
+      <nav class="nav__links" id="nav-links" aria-label="Principal" data-i18n-attr="aria-label:ui.navLabel">
+        <a href="../index.html#demons-bell">Demon's Bell</a>
+        <a href="../index.html#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__tools">
+        <a class="icon-link" href="https://www.artstation.com/og_isy" target="_blank" rel="noopener" aria-label="ArtStation"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-artstation"></use></svg></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/andreu-sureda-135765315/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-linkedin-logo"></use></svg></a>
+        <a class="icon-link icon-link--extra" href="https://www.instagram.com/ogisy3d/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg></a>
+        <a class="icon-link icon-link--extra" href="https://x.com/OG_ISY" target="_blank" rel="noopener" aria-label="X"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-x-logo"></use></svg></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
+          <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle data-i18n="ui.menu">Menú</button>
       </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="next">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-      <div class="carousel-dots"><button class="carousel-dot active" aria-label="slide 1"></button><button class="carousel-dot" aria-label="slide 2"></button><button class="carousel-dot" aria-label="slide 3"></button><button class="carousel-dot" aria-label="slide 4"></button></div>
-      <div class="carousel-counter"></div>
     </div>
+  </header>
 
-    <h3><span data-es>Vídeo del Proyecto</span><span data-en>Project Video</span></h3>
-    <div class="walkthrough-video">
-      <iframe src="https://www.youtube.com/embed/V0zQ2Z_p240?si=95wI6A0UC-DgQxnA"
-              title="FreeXPace — Player To Player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style="width:100%;height:100%;border:none"></iframe>
-    </div>
+  <main id="main">
+    <article>
+      <header class="p-hero wrap">
+        <a class="p-back text-link" href="../index.html#proyectos"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-right"></use></svg><span data-i18n="p.back">Proyectos</span></a>
+        <h1 class="p-title h-display">Player To Player</h1>
+        <p class="p-who" data-i18n="pp.who">FreeXPace · Tech Art / Gameplay &amp; UI Programmer</p>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>Krita</li><li>Agile</li><li>GitHub</li><li>Jira</li></ul>
+        <p class="lead" data-i18n="pp.lead">Juego móvil para Android publicado en Google Play. Catorce meses como Gameplay Programmer y Technical Artist.</p>
+        <div class="p-links">
+          <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.PlayerToPlayer.FreeXpace" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-google-play-logo"></use></svg>
+            <span data-i18n="pp.gp">Ver en Google Play</span>
+          </a>
+        </div>
+      </header>
 
+      <div class="wrap">
+        <figure class="p-cover g-fig">
+          <a class="g-item" href="../media/personal-projects/player-to-player/FreeXPace_01.png" data-lb="gallery" data-md="../media/web/personal-projects/player-to-player/FreeXPace_01-1600.jpg">
+            <img src="../media/web/personal-projects/player-to-player/FreeXPace_01-1600.jpg" srcset="../media/web/personal-projects/player-to-player/FreeXPace_01-800.jpg 800w, ../media/web/personal-projects/player-to-player/FreeXPace_01-1600.jpg 1600w" sizes="(max-width: 1440px) 92vw, 1328px" width="1600" height="900" fetchpriority="high" decoding="async"
+                 alt="FreeXPace: nave espacial enfrentándose a un jefe junto a una estación espacial" data-i18n-attr="alt:pp.g1.alt">
+          </a>
+          <figcaption data-i18n="pp.g1.cap">Pantalla principal</figcaption>
+        </figure>
+
+        <div class="p-body">
+          <div class="p-body__main">
+            <h2 class="reveal" data-i18n="p.what">Qué hice</h2>
+            <ul class="p-list reveal">
+              <li data-i18n="pp.l1"><b>Gameplay:</b> mecánicas e interacción en Unity / C#.</li>
+              <li data-i18n="pp.l2"><b>UI:</b> animaciones y transiciones de interfaz.</li>
+              <li data-i18n="pp.l3"><b>Assets:</b> integración de sprites, modelos y atlas de texturas.</li>
+              <li data-i18n="pp.l4"><b>Rendimiento:</b> optimización para Android.</li>
+            </ul>
+            <h2 class="reveal" data-i18n="pp.team">Equipo</h2>
+            <p class="reveal" data-i18n="pp.p1">Equipo Agile con sprints de dos semanas (planning, daily, retrospectiva), Jira y GitHub con branches, pull requests y code reviews.</p>
+          </div>
+          <aside class="p-body__side reveal">
+            <dl class="p-facts">
+              <div><dt data-i18n="p.role">Rol</dt><dd data-i18n="pp.roleV">Tech Art / Gameplay &amp; UI Programmer</dd></div>
+              <div><dt data-i18n="p.context">Contexto</dt><dd data-i18n="pp.ctxV">Trabajo en estudio, ene 2024 - feb 2025</dd></div>
+              <div><dt data-i18n="p.tools">Herramientas</dt><dd>Unity, C#, Krita, GitHub, Jira</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <section class="p-section" aria-labelledby="gal-t">
+          <h2 class="reveal" id="gal-t" data-i18n="p.gallery">Galería</h2>
+          <div class="gallery gallery--grid" style="margin-top:1.5rem">
+            <figure class="g-fig reveal">
+              <a class="g-item" href="../media/personal-projects/player-to-player/FreeXPace_02.png" data-lb="gallery" data-md="../media/web/personal-projects/player-to-player/FreeXPace_02-1600.jpg">
+                <img src="../media/web/personal-projects/player-to-player/FreeXPace_02-800.jpg" srcset="../media/web/personal-projects/player-to-player/FreeXPace_02-800.jpg 800w, ../media/web/personal-projects/player-to-player/FreeXPace_02-1600.jpg 1600w" sizes="(max-width: 1440px) 92vw, 1328px" width="800" height="450" loading="lazy" decoding="async"
+                     alt="FreeXPace: exploración de una galaxia con asteroides y una nave nueva desbloqueable" data-i18n-attr="alt:pp.g2.alt">
+              </a>
+              <figcaption data-i18n="pp.g2.cap">Menú de navegación</figcaption>
+            </figure>
+            <figure class="g-fig reveal">
+              <a class="g-item" href="../media/personal-projects/player-to-player/FreeXPace_03.png" data-lb="gallery" data-md="../media/web/personal-projects/player-to-player/FreeXPace_03-1600.jpg">
+                <img src="../media/web/personal-projects/player-to-player/FreeXPace_03-800.jpg" srcset="../media/web/personal-projects/player-to-player/FreeXPace_03-800.jpg 800w, ../media/web/personal-projects/player-to-player/FreeXPace_03-1600.jpg 1600w" sizes="(max-width: 599px) 100vw, 46vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="FreeXPace: batalla de supervivencia contra drones con controles táctiles" data-i18n-attr="alt:pp.g3.alt">
+              </a>
+              <figcaption data-i18n="pp.g3.cap">Mecánica principal</figcaption>
+            </figure>
+            <figure class="g-fig reveal" style="--i:1">
+              <a class="g-item" href="../media/personal-projects/player-to-player/FreeXPace_04.png" data-lb="gallery" data-md="../media/web/personal-projects/player-to-player/FreeXPace_04-1600.jpg">
+                <img src="../media/web/personal-projects/player-to-player/FreeXPace_04-800.jpg" srcset="../media/web/personal-projects/player-to-player/FreeXPace_04-800.jpg 800w, ../media/web/personal-projects/player-to-player/FreeXPace_04-1600.jpg 1600w" sizes="(max-width: 599px) 100vw, 46vw" width="800" height="450" loading="lazy" decoding="async"
+                     alt="FreeXPace: personalización de naves junto a un portal espacial" data-i18n-attr="alt:pp.g4.alt">
+              </a>
+              <figcaption data-i18n="pp.g4.cap">Vista en Google Play</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="p-section" aria-labelledby="vid-t">
+          <h2 class="reveal" id="vid-t" data-i18n="p.video">Vídeo</h2>
+          <div class="video reveal" data-yt="V0zQ2Z_p240" data-yt-title="FreeXPace">
+            <button class="video__btn" type="button">
+              <img src="https://i.ytimg.com/vi/V0zQ2Z_p240/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="">
+              <span class="video__play">
+                <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-play"></use></svg>
+                <span data-i18n="p.play">Reproducir vídeo</span>
+              </span>
+            </button>
+          </div>
+        </section>
+
+        <a class="p-next" href="vr-tururut.html">
+          <span data-i18n="p.next">Siguiente proyecto</span>
+          <strong>VR Environments <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-right"></use></svg></strong>
+        </a>
+      </div>
+    </article>
   </main>
-  <aside class="proj-sidebar">
-    <div class="proj-meta-card"><h4><span data-es>Info del Proyecto</span><span data-en>Project Info</span></h4><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Empresa</span><span data-en>Company</span></span><span class="proj-meta-value">Player To Player</span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Rol</span><span data-en>Role</span></span><span class="proj-meta-value">Tech Art / Gameplay Prog.</span></div><div class="proj-meta-row"><span class="proj-meta-key"><span data-es>Período</span><span data-en>Period</span></span><span class="proj-meta-value"><span data-es>Ene 2024 — Feb 2025</span><span data-en>Jan 2024 — Feb 2025</span></span></div><div class="proj-meta-row"><span class="proj-meta-key">Platform</span><span class="proj-meta-value">Android</span></div><div class="proj-meta-row"><span class="proj-meta-key">Engine</span><span class="proj-meta-value">Unity</span></div><div class="tag-list"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Krita</span><span class="tag">Agile</span><span class="tag">GitHub</span><span class="tag">Jira</span></div></div>
-    <a href="https://play.google.com/store/apps/details?id=com.PlayerToPlayer.FreeXpace" target="_blank" rel="noopener" class="proj-link-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg><span data-es>Ver en Google Play</span><span data-en>View on Google Play</span></a>
-    <a href="../index.html#projects" class="proj-link-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg><span data-es>Volver a Proyectos</span><span data-en>Back to Projects</span></a>
-  </aside>
-</div>
-<footer>
-  <div><div class="footer-logo">Andreu Sureda</div><div class="footer-role">Environment Artist · Technical Artist</div></div>
-  <div class="footer-contact">
-    <a href="mailto:andreusuredaluis@gmail.com">andreusuredaluis@gmail.com</a>
-    <a href="tel:+34638274997">+34 638 27 49 97</a>
-    <div class="footer-copy">© 2026 Andreu Sureda</div>
-  </div>
-</footer>
-<script src="../js/main.js"></script>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> Andreu Sureda</p>
+      <ul class="footer__social" aria-label="Redes sociales" data-i18n-attr="aria-label:ui.social">
+        <li><a class="icon-link" href="https://www.artstation.com/og_isy" target="_blank" rel="noopener" aria-label="ArtStation"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-artstation"></use></svg></a></li>
+        <li><a class="icon-link" href="https://www.linkedin.com/in/andreu-sureda-135765315/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-linkedin-logo"></use></svg></a></li>
+        <li><a class="icon-link" href="https://www.instagram.com/ogisy3d/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-instagram-logo"></use></svg></a></li>
+        <li><a class="icon-link" href="https://x.com/OG_ISY" target="_blank" rel="noopener" aria-label="X"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-x-logo"></use></svg></a></li>
+      </ul>
+      <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+    </div>
+  </footer>
 </body>
 </html>
