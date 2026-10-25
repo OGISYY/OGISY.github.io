@@ -320,7 +320,7 @@ document.querySelectorAll('[data-yt]').forEach((box) => {
     const f = document.createElement('iframe');
     f.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0`;
     f.title = box.dataset.ytTitle || 'YouTube';
-    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen = true;
     f.referrerPolicy = 'strict-origin-when-cross-origin';
     box.replaceChildren(f);

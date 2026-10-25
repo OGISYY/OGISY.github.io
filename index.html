@@ -2,6 +2,7 @@
 <html lang="es" data-base="">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qpiXTAZqhY6QLGLopjvbk4mfrF3q+TyhT0Vu+GizZyo='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="meta.title">Andreu Sureda | Environment Artist · Technical Artist</title>
   <meta name="description" content="Portafolio de Andreu Sureda, Environment Artist y Technical Artist. Mundos atmosféricos en Unreal Engine 5: Demon's Bell, materiales procedurales, VFX y herramientas." data-i18n-attr="content:meta.desc">
@@ -40,33 +41,18 @@
   }
   </script>
 
-  <script>
-    // Marca JS activo y evita el parpadeo del espanol si el visitante eligio ingles
-    document.documentElement.classList.add('js');
-    try {
-      if (localStorage.getItem('portfolio_lang') === 'en') {
-        document.documentElement.setAttribute('data-lang-pending', '');
-        setTimeout(function () { document.documentElement.removeAttribute('data-lang-pending'); }, 2000);
-      }
-    } catch (e) {}
-  </script>
+  <!-- Marca JS activo y evita el parpadeo del espanol si el visitante eligio ingles -->
+  <script src="js/boot.js"></script>
 
   <link rel="preload" href="fonts/big-shoulders-display-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" fetchpriority="high"
         imagesrcset="media/web/demons-bell/blocking/Belfry/Belfry_01-800.jpg 800w, media/web/demons-bell/blocking/Belfry/Belfry_01-1600.jpg 1600w"
         imagesizes="(max-width: 899px) calc(100vw - 32px), 50vw">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Three.js como modulo ES desde CDN, sin paso de build -->
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-    }
-  }
-  </script>
+  <!-- Three.js r170 como modulo ES alojado en js/lib/, sin paso de build.
+       Import map en una sola linea: si lo cambias, recalcula su sha256 en la CSP de arriba. -->
+  <script type="importmap">{"imports":{"three":"./js/lib/three-0.170.0/build/three.module.min.js","three/addons/":"./js/lib/three-0.170.0/examples/jsm/"}}</script>
   <script type="module" src="js/main.js"></script>
 </head>
 <body>
@@ -565,7 +551,7 @@
               <!-- Cambia data-yt por el ID de otro video de YouTube si lo actualizas -->
               <div class="video reveal" data-yt="fYH78W0ct8s" data-yt-title="Demon's Bell walkthrough">
                 <button class="video__btn" type="button">
-                  <img src="https://i.ytimg.com/vi/fYH78W0ct8s/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="">
+                  <img src="media/web/video/fYH78W0ct8s.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
                   <span class="video__play">
                     <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-play"></use></svg>
                     <span data-i18n="db.wt.play">Reproducir walkthrough</span>

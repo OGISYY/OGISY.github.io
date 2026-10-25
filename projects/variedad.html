@@ -2,6 +2,7 @@
 <html lang="es" data-base="../">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="va.meta.title">Variedad de proyectos: materiales y VFX | Andreu Sureda</title>
   <meta name="description" content="Materiales procedurales PBR en Substance Designer y VFX en tiempo real con Niagara en Unreal Engine 5. Trabajo de Andreu Sureda." data-i18n-attr="content:va.meta.desc">
@@ -15,10 +16,7 @@
   <meta property="og:image" content="https://andreusureda.com/media/web/personal-projects/variedad/UnrealEngine_Shader_02-1600.jpg">
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
-  <script>
-    document.documentElement.classList.add('js');
-    try { if (localStorage.getItem('portfolio_lang') === 'en') { document.documentElement.setAttribute('data-lang-pending', ''); setTimeout(function () { document.documentElement.removeAttribute('data-lang-pending'); }, 2000); } } catch (e) {}
-  </script>
+  <script src="../js/boot.js"></script>
   <link rel="preload" href="../fonts/big-shoulders-display-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/styles.css">
   <script type="module" src="../js/main.js"></script>
@@ -110,7 +108,7 @@
           <h2 class="reveal" id="vid-t" data-i18n="p.video">Vídeo</h2>
           <div class="video reveal" data-yt="jfpQ0KShDq8" data-yt-title="Materiales y VFX">
             <button class="video__btn" type="button">
-              <img src="https://i.ytimg.com/vi/jfpQ0KShDq8/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="">
+              <img src="../media/web/video/jfpQ0KShDq8.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
               <span class="video__play">
                 <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-play"></use></svg>
                 <span data-i18n="p.play">Reproducir vídeo</span>

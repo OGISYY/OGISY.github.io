@@ -4,10 +4,12 @@
 # - Los originales no se modifican. Usa WIC (WPF), que decodifica PNG y WebP.
 # - Solo procesa imagenes nuevas o modificadas (usa -Force para regenerarlo todo).
 # - Borra de media/web/ los derivados cuyo original ya no existe.
+# - No toca media/web/video/: las miniaturas locales de YouTube no tienen original en media/.
 param([string]$Root = '.', [int[]]$Widths = @(800, 1600), [int]$Quality = 80, [switch]$Force)
 Add-Type -AssemblyName PresentationCore, WindowsBase
 $media = (Resolve-Path (Join-Path $Root 'media')).Path
 $out   = Join-Path $media 'web'
+$keep  = Join-Path $out 'video'
 $expected = @{}
 
 Get-ChildItem $media -Recurse -Include *.png, *.jpg, *.jpeg, *.webp |
@@ -51,7 +53,7 @@ Get-ChildItem $media -Recurse -Include *.png, *.jpg, *.jpeg, *.webp |
 # Limpieza: derivados huerfanos y carpetas vacias
 if (Test-Path $out) {
   Get-ChildItem $out -Recurse -File -Filter *.jpg |
-    Where-Object { -not $expected.ContainsKey($_.FullName.ToLower()) } |
+    Where-Object { $_.FullName -notlike "$keep\*" -and -not $expected.ContainsKey($_.FullName.ToLower()) } |
     ForEach-Object { "Eliminado (sin original): " + $_.FullName.Substring($out.Length + 1); Remove-Item $_.FullName }
   Get-ChildItem $out -Recurse -Directory | Sort-Object { $_.FullName.Length } -Descending |
     Where-Object { -not (Get-ChildItem $_.FullName -Force) } | Remove-Item

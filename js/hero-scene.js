@@ -1,6 +1,8 @@
 /* ==================================================================
    hero-scene.js | Escena 3D del hero
    Three.js r170 como modulo ES (importmap en index.html), sin build.
+   Alojado en el repo: js/lib/three-0.170.0/ (build/, loaders, utils y el
+   decodificador Draco), sin dependencias de CDN.
 
    Que hay en escena:
    - Campanario gotico con una campana de hierro (procedural) que oscila
@@ -29,8 +31,10 @@
 import * as THREE from 'three';
 
 export const CONFIG = {
+  // Si activas el .glb con Draco, la CSP de index.html necesita ademas:
+  // 'wasm-unsafe-eval' en script-src, worker-src 'self' blob: y blob: en img-src.
   bellModel: null, // p. ej. 'media/3d/bell.glb'
-  dracoDecoderPath: 'https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/draco/gltf/',
+  dracoDecoderPath: 'js/lib/three-0.170.0/examples/jsm/libs/draco/gltf/', // relativa a index.html
   maxPixelRatio: 2,
   bg: 0x0d0b0a,
   ember: 0xff7a2e,

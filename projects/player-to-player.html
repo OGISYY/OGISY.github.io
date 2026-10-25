@@ -2,6 +2,7 @@
 <html lang="es" data-base="../">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="pp.meta.title">Player To Player, FreeXPace | Andreu Sureda</title>
   <meta name="description" content="FreeXPace: juego móvil para Android publicado en Google Play. Programación de gameplay y arte técnico en Unity / C# de Andreu Sureda." data-i18n-attr="content:pp.meta.desc">
@@ -15,10 +16,7 @@
   <meta property="og:image" content="https://andreusureda.com/media/web/personal-projects/player-to-player/FreeXPace_01-1600.jpg">
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
-  <script>
-    document.documentElement.classList.add('js');
-    try { if (localStorage.getItem('portfolio_lang') === 'en') { document.documentElement.setAttribute('data-lang-pending', ''); setTimeout(function () { document.documentElement.removeAttribute('data-lang-pending'); }, 2000); } } catch (e) {}
-  </script>
+  <script src="../js/boot.js"></script>
   <link rel="preload" href="../fonts/big-shoulders-display-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/styles.css">
   <script type="module" src="../js/main.js"></script>
@@ -58,7 +56,7 @@
         <ul class="tags"><li>Unity</li><li>C#</li><li>Krita</li><li>Agile</li><li>GitHub</li><li>Jira</li></ul>
         <p class="lead" data-i18n="pp.lead">Juego móvil para Android publicado en Google Play. Catorce meses como Gameplay Programmer y Technical Artist.</p>
         <div class="p-links">
-          <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.PlayerToPlayer.FreeXpace" target="_blank" rel="noopener">
+          <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.PlayerToPlayer.FreeXpaceWavesRift" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-google-play-logo"></use></svg>
             <span data-i18n="pp.gp">Ver en Google Play</span>
           </a>
@@ -126,7 +124,7 @@
           <h2 class="reveal" id="vid-t" data-i18n="p.video">Vídeo</h2>
           <div class="video reveal" data-yt="V0zQ2Z_p240" data-yt-title="FreeXPace">
             <button class="video__btn" type="button">
-              <img src="https://i.ytimg.com/vi/V0zQ2Z_p240/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="">
+              <img src="../media/web/video/V0zQ2Z_p240.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
               <span class="video__play">
                 <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#i-play"></use></svg>
                 <span data-i18n="p.play">Reproducir vídeo</span>
